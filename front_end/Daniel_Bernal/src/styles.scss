@@ -1,0 +1,25 @@
+$primary: #03080E;
+$secondary: #141D26;
+
+$aditionals-colors:(
+    "tertiary": #43485B,
+    "fourth": #5B5D72,
+    "fifth": #9396A7,
+    "sixth": #152E3E
+);
+
+$theme-colors:(
+    "primary": $primary,
+    "secondary": $secondary
+);
+
+$theme-colors: map-merge($theme-colors, $aditionals-colors);
+
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/bootstrap";
+
+ul, ol{
+    list-style: none;
+}
