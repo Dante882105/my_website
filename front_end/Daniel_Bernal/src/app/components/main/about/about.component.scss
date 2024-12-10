@@ -1,3 +1,36 @@
 #about{
     height: calc(100vh - 8vh);
 }
+@keyframes appear-right{
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes appear-left{
+    0%{
+        position: relative;
+        left: 40%; 
+    }
+    100% {
+        position: relative;
+        left: 0%;
+    }
+}
+#photo{
+    width: 50%;
+    margin: auto;
+}
+#photo{
+    animation: appear-right 3s linear;
+}
+#info>div>small{
+    animation: appear-left 1s ease;
+}
+@media (max-width: 575px) {
+    #about{
+        height: auto;
+    }  
+}

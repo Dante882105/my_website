@@ -1,3 +1,15 @@
+@keyframes glowing {
+    0%{
+        color: #ffffff;
+    }
+    50%{
+        color: #43485B;
+    }
+    100%{
+        color: #ffffff;
+    }
+}
+
 #home{
     height: calc(100vh - 8vh);
     background-image: url(../../../../assets/imgs/wallpapers/homeImage.jpg);
@@ -8,4 +20,8 @@
 
 #greeting{
     height: calc(92vh - 10%);
+}
+
+.socialMedia{
+    animation: glowing 5s linear infinite;
 }

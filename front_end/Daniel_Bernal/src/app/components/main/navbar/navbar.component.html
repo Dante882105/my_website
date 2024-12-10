@@ -1,13 +1,38 @@
-<nav class="d-flex flex-row bg-primary">
-    <div class="col-10">
+<nav class="d-flex flex-row align-items-center bg-primary col-12">
+    <div class="col-2 d-block d-sm-none text-center h-100 z-3" (click)="show_hide()">
+        <div class="bg-secondary h-100 d-flex align-items-center justify-content-center">
+            <i class="bi bi-list text-fifth fs-1 fw-bolder"></i>
+        </div>
+    </div>
+    <div class="d-none d-sm-block col-10">
         <ul class="d-flex flex-row align-items-center text-fifth mb-0 h-100">
-            <li type="button" class="me-3 fw-bolder">HOME</li>
-            <li type="button" class="me-3 fw-bolder">ABOUT</li>
-            <li type="button" class="me-3 fw-bolder">RESUME</li>
-            <li type="button" class="me-3 fw-bolder">PORTFOLIO</li>
+            <li routerLink="home" routerLinkActive="active" type="button" class="me-3 fw-bolder">HOME</li>
+            <li routerLink="about" routerLinkActive="active" type="button" class="me-3 fw-bolder">ABOUT</li>
+            <li routerLink="resume" routerLinkActive="active" type="button" class="me-3 fw-bolder">RESUME</li>
+            <!-- <li routerLink="portfolio" type="button" class="me-3 fw-bolder">PORTFOLIO</li> -->
         </ul>
     </div>
-    <div class="col-2">
+    <div class="col-10 d-sm-none z-2 menu_show" #menu>
+        <ul class="text-tertiary">
+            <li routerLink="home" routerLinkActive="active" type="button" class="fw-bolder">
+                <div>
+                    <i class="bi bi-house-door-fill fs-1"></i>
+                </div>
+            </li>
+            <li routerLink="about" routerLinkActive="active" type="button" class="fw-bolder">
+                <div>
+                    <i class="bi bi-person-fill fs-1"></i>
+                </div>
+            </li>
+            <li routerLink="resume" routerLinkActive="active" type="button" class="fw-bolder">
+                <div>
+                    <i class="bi bi-mortarboard-fill fs-1"></i>
+                </div>
+            </li>
+            <!-- <li routerLink="portfolio" type="button" class="me-3 fw-bolder">PORTFOLIO</li> -->
+        </ul>
+    </div>
+    <div class="d-none d-sm-block col-2">
         <div type="button" class="text-end me-3 h-100 d-flex justify-content-end align-items-center">
             <i class="fs-4 bi bi-phone text-fifth"></i>
         </div>

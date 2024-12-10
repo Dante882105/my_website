@@ -1,9 +1,81 @@
+@keyframes move_lefth {
+    0% { 
+        position: relative;
+        left: 20%;
+        opacity: 0;
+        width: 100%;
+    }
+    100% {
+        position: relative;
+        left: 0%;
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+@keyframes move_down{
+    0%{
+        position: relative;
+        bottom: 3%;
+        opacity: 0;
+    }
+    100%{
+        position: relative;
+        bottom: 0%;
+        opacity: 1;    }
+}
+
+@keyframes move_rigth {
+    0% { 
+        position: relative;
+        right: 40%;
+        opacity: 0;
+        width: 100%;
+    }
+    100% {
+        position: relative;
+        right: 0%;
+        opacity: 1;
+        width: 100%;
+    }
+}
 .logo{
     height: 30px;
     width: 30px;
 }
-#resume{
+#resume, #skills, #experience, #education{
     height: calc(100vh - 8vh);
+    padding: 5px;
+}
+#skills, #experience, #education{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#move_lefth{
+    animation: move_rigth 2s ease-in-out;
+}
+#move_down{
+    animation: move_down 2s linear;
+}
+#move_rigth{
+    animation: move_lefth 2s ease-in-out;
+}
+#experience::-webkit-scrollbar, #education::-webkit-scrollbar, #skills::-webkit-scrollbar{
+    border-radius: 50px;
+    background-color: #141D26;
+    width: 4px;
+}
+#skills::-webkit-scrollbar-thumb,
+#experience::-webkit-scrollbar-thumb, #education::-webkit-scrollbar-thumb {
+    background-color: #152E3E;
+    border-radius: 4px;
+}
+.others{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .status{
     height: 60px;
@@ -14,4 +86,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.progress-bar {
+    transition: width 4s ease-in-out; /* Duración y tipo de transición */
+}
+@media (max-width: 550px) {
+    #resume, #skills, #experience, #education{
+        height: auto;
+        padding: 5px;
+    }
 }
